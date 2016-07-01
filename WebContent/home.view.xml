@@ -1,0 +1,46 @@
+<core:View xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:commons="sap.ui.commons" xmlns:m="sap.m" xmlns:rte="sap.ui.richtexteditor"
+	xmlns="sap.m" xmlns:layout="sap.ui.commons.layout" height="100%"
+	xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data" controllerName="component.home"
+	resourceBundleAlias="i18n" resourceBundleLocale="en">
+	<Page id="home" enableScrolling="false" class="sapUiSizeCompact"
+		text="" showFooter="false">
+		<layout:VerticalLayout class="mem-m-objectHeader"
+			width="100%">
+
+			<m:IconTabBar>
+				<items>
+					<m:IconTabFilter text="Basic View">
+									<m:Table width="100%" mode="single" id="table">
+								<m:columns>
+									<m:Column width="25%">
+										<m:header>
+											<m:Label text="Car Id" />
+										</m:header>
+									</m:Column>
+									<m:Column width="25%">
+										<m:header>
+											<m:Label text="Location" />
+										</m:header>
+									</m:Column>
+									<m:Column width="25%">
+										<m:header>
+											<m:Label text="Color" />
+										</m:header>
+									</m:Column>
+										<m:Column width="25%">
+										<m:header>
+											<m:Label text="Special" />
+										</m:header>
+									</m:Column>
+								</m:columns>
+							</m:Table>
+					</m:IconTabFilter>
+				</items>
+			</m:IconTabBar>
+		</layout:VerticalLayout>
+
+	</Page>
+
+</core:View>

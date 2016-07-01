@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+<title>Insert title here</title>
+<link href="library.css" rel="stylesheet">
+<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+	id="sap-ui-bootstrap"
+	data-sap-ui-libs="sap.ui.commons,sap.ui.table,sap.ui.ux3,sap.m,sap.viz"
+	data-sap-ui-theme="sap_bluecrystal">
+	
+</script>
+<script>
+//	sap.ui.localResources("");
+jQuery.sap.registerModulePath("component", ""); 
+ 	var page = new sap.ui.view({
+		id : "home",
+		viewName : "component.home",
+		type : sap.ui.core.mvc.ViewType.XML
+	}); 
+	var app = new sap.m.App("myApp", {
+		initialPage : "component.home"
+	}); // page1 should be displayed first
+	page.data("viewData", app);
+	app.addPage(page)/* .addPage(page2) */; // add both pages to the App
+	app.placeAt("master");
+	var oAppHeader = new sap.ui.commons.ApplicationHeader("appHeader");
+	oAppHeader.setLogoSrc("images.png");
+	oAppHeader.setLogoText("Car Service");
+	oAppHeader.setDisplayWelcome(true);
+	oAppHeader.setUserName("Ankit");
+	oAppHeader.placeAt("sample1");
+</script>
+
+</head>
+<body class="sapUiBody" role="application">
+	<div id="sample1"></div>
+	<div id="master" class="appimage"></div>
+</body>
+</html>
